@@ -1,0 +1,7 @@
+{
+  "name": "clean_architecture_api",
+  "version": "1.0.0",
+  "main": "index.js",
+  "author": "Luiz <luizz.ggr@gmail.com>",
+  "license": "MIT"
+}

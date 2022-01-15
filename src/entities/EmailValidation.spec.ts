@@ -12,7 +12,12 @@ describe("Email validation", () => {
    })
 
    test("should accept valid e", () => {
-    const email:string = "any@email.com"
-    expect(Email.validate(email)).toBeTruthy()
-})
+        const email:string = "any@email.com"
+        expect(Email.validate(email)).toBeTruthy()
+    })
+
+    test("should not accept local part larger then 64 chars", () => {
+        const email:string = "l".repeat(65) + "@email.com"
+        expect(Email.validate(email)).toBeFalsy()
+    })
 })

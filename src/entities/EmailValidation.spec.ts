@@ -20,4 +20,9 @@ describe("Email validation", () => {
         const email:string = "l".repeat(65) + "@email.com"
         expect(Email.validate(email)).toBeFalsy()
     })
+
+    test("should not accept string part larger then 320 chars", () => {
+        const email:string = "l".repeat(64) + "@" + "d".repeat(128) + "." + "d".repeat(127)
+        expect(Email.validate(email)).toBeFalsy()
+    })
 })

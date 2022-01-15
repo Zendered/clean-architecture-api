@@ -16,13 +16,18 @@ describe("Email validation", () => {
         expect(Email.validate(email)).toBeTruthy()
     })
 
-    test("should not accept local part larger then 64 chars", () => {
-        const email:string = "l".repeat(65) + "@email.com"
+    test("should not accept strings larger then 320 chars", () => {
+        const email:string = "l".repeat(64) + "@" + "d".repeat(128) + "." + "d".repeat(127)
         expect(Email.validate(email)).toBeFalsy()
     })
 
-    test("should not accept string part larger then 320 chars", () => {
-        const email:string = "l".repeat(64) + "@" + "d".repeat(128) + "." + "d".repeat(127)
+    test("should not accept domain part larger then 255 chars", () => {
+        const email:string = "local@" + "d".repeat(128) + "." + "d".repeat(127)
+        expect(Email.validate(email)).toBeFalsy()
+    })
+
+    test("should not accept local part larger then 64 chars", () => {
+        const email:string = "l".repeat(65) + "@email.com"
         expect(Email.validate(email)).toBeFalsy()
     })
 })

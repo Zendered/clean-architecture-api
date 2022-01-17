@@ -36,9 +36,9 @@ describe("Register user on mailing list", () => {
         const users: IUserData[] = []
         const repo: IUserRepository = new InMemoryUserRepository(users)
         const usecase: RegisterUserOnMailingList = new RegisterUserOnMailingList(repo)
-        const inValidname = ""
+        const inValidName = ""
         const email = "invalid_email"
-        const response = await usecase.registerUserOnMailingList({ name: inValidname, email})
+        const response = await usecase.registerUserOnMailingList({ name: inValidName, email})
         const user = await repo.findUserByEmail("any@email.com")
         expect(user).toBeNull()
         expect(response).toEqual(left(new InvalidNameError()))

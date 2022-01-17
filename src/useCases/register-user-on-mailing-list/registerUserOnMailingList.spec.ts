@@ -2,9 +2,6 @@ import { IUserData } from "../../entities/userData"
 import { IUserRepository } from "./ports/userRepository";
 import { InMemoryUserRepository } from "./repository/InMemoryUserRepository";
 import {RegisterUserOnMailingList} from './RegisterUserOnMailingList'
-import { InvalidEmailError } from "../../entities/error/InvalidEmailError";
-import { left } from "../../shared/Either";
-import { InvalidNameError } from "../../entities/error/InvalidNameError";
 
 describe("Register user on mailing list", () => {
     test("should add user with complete data to mailing list", async () => {

@@ -1,4 +1,4 @@
-import { IUserData } from '../userData'
+import { IUserData } from '../../../entities/userData'
 import { InMemoryUserRepository } from './InMemoryUserRepository'
 
 describe('In memory User repository', () => {

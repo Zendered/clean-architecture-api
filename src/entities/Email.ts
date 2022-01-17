@@ -4,7 +4,7 @@ import { InvalidEmailError } from './error/InvalidEmailError'
 export class Email {
     private readonly email: string;
 
-    constructor (email: string) {
+    private constructor (email: string) {
       this.email = email
     }
 

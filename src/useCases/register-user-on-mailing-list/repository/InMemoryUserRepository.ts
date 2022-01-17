@@ -1,4 +1,4 @@
-import { IUserRepository } from '../../ports/userRepository'
+import { IUserRepository } from '../ports/userRepository'
 import { IUserData } from '../../../entities/userData'
 
 export class InMemoryUserRepository implements IUserRepository {

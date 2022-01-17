@@ -2,7 +2,8 @@ import { Either, left, right } from '../shared/Either'
 import { InvalidNameError } from './error/InvalidNameError'
 
 export class Name {
-  private readonly value: string
+  public readonly value: string
+
   private constructor (name: string) {
     this.value = name
   }

@@ -17,12 +17,12 @@ export class User {
     static create (userData: IUserData): Either<InvalidNameError | InvalidEmailError, User> {
       const nameOrError = Name.create(userData.name)
       if (nameOrError.isLeft()) {
-        return left(new InvalidNameError(userData.name))
+        return left(nameOrError.value)
       }
 
       const emailORError = Email.create(userData.email)
       if (emailORError.isLeft()) {
-        return left(new InvalidEmailError(userData.email))
+        return left(emailORError.value)
       }
 
       const name: Name = nameOrError.value as Name

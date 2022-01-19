@@ -1,5 +1,5 @@
 import { Email, Name, IUserData } from './'
-import { Either, left, right } from '../shared/'
+import { Either, left, right } from '@src/shared/'
 import { InvalidEmailError, InvalidNameError } from './error'
 
 export class User {

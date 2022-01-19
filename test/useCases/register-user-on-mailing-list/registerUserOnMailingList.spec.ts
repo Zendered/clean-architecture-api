@@ -1,7 +1,7 @@
-import { IUserData } from "../../../src/entities/"
-import { IUserRepository } from "../../../src/useCases/register-user-on-mailing-list/ports/";
+import { IUserData } from "@src/entities/"
+import { IUserRepository } from "@src/useCases/register-user-on-mailing-list/ports/";
 import { InMemoryUserRepository } from "./repository/";
-import {RegisterUserOnMailingList} from '../../../src/useCases/register-user-on-mailing-list/RegisterUserOnMailingList'
+import {RegisterUserOnMailingList} from '@src/useCases/register-user-on-mailing-list/RegisterUserOnMailingList'
 
 describe("Register user on mailing list", () => {
     test("should add user with complete data to mailing list", async () => {

@@ -1,4 +1,4 @@
-import { IUserData } from '../../../entities'
+import { IUserData } from '@src/entities'
 
 export interface IUserRepository {
     add(user: IUserData): Promise<void>

@@ -58,44 +58,44 @@ describe('Register user web controller', () => {
   })
 
   test("Should return status code 400 when request is missing user name", async () => {
-    const requestWithInvalidName: IHttpRequest = {
+    const requestWithMissingName: IHttpRequest = {
         body: {email: 'any@mail.com',}
     }
-    const response: IHttpResponse = await controller.handle(requestWithInvalidName)
+    const response: IHttpResponse = await controller.handle(requestWithMissingName)
     expect(response.statusCode).toEqual(400)
     expect(response.body).toBeInstanceOf(MissingParamError)
     expect((response.body as Error).message).toEqual('Missing parameter from request: name.')
   })
 
   test("Should return status code 400 when request is missing user email", async () => {
-    const requestWithInvalidName: IHttpRequest = {
+    const requestWithMissingEmail: IHttpRequest = {
         body: {name: 'any name',}
     }
-    const response: IHttpResponse = await controller.handle(requestWithInvalidName)
+    const response: IHttpResponse = await controller.handle(requestWithMissingEmail)
     expect(response.statusCode).toEqual(400)
     expect(response.body).toBeInstanceOf(MissingParamError)
     expect((response.body as Error).message).toEqual('Missing parameter from request: email.')
   })
 
   test("Should return status code 400 when request is missing user email", async () => {
-    const requestWithInvalidName: IHttpRequest = {
+    const requestWithMissingNameAndEmail: IHttpRequest = {
         body: {}
     }
-    const response: IHttpResponse = await controller.handle(requestWithInvalidName)
+    const response: IHttpResponse = await controller.handle(requestWithMissingNameAndEmail)
     expect(response.statusCode).toEqual(400)
     expect(response.body).toBeInstanceOf(MissingParamError)
     expect((response.body as Error).message).toEqual('Missing parameter from request: name email.')
   })
 
   test("Should return status code 500 when server raises", async () => {
-    const requestWithInvalidName: IHttpRequest = {
+    const request: IHttpRequest = {
         body: {
             name: "Any name",
             email: 'any@mail.com',
         }
     }
     const controller: RegisterUserController = new RegisterUserController(errorThrowingUseCaseStub)
-    const response: IHttpResponse = await controller.handle(requestWithInvalidName)
+    const response: IHttpResponse = await controller.handle(request)
     expect(response.statusCode).toEqual(500)
     expect(response.body).toBeInstanceOf(Error)
   })

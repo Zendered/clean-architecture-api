@@ -1,6 +1,6 @@
 {
     "*.ts": [
         "eslint --fix",
-        "yarn test:staged --passWithNoTests"
+        "yarn test-staged --passWithNoTests"
     ]
 }

@@ -9,3 +9,8 @@ export const badRequest = (data:any):IHttpResponse => ({
   statusCode: 400,
   body: data
 })
+
+export const serverError = (data:any):IHttpResponse => ({
+  statusCode: 500,
+  body: data
+})

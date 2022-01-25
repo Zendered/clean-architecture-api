@@ -5,7 +5,9 @@ import { IUserData } from "@src/entities";
 import { InvalidEmailError, InvalidNameError } from "@src/entities/error";
 import { RegisterUserOnMailingList } from "@src/useCases/register-user-on-mailing-list";
 import { IUserRepository, IUseCase } from "@src/useCases/register-user-on-mailing-list/ports";
-import { InMemoryUserRepository } from "@test/useCases/register-user-on-mailing-list/repository";
+// import { InMemoryUserRepository } from '@src/useCases/register-user-on-mailing-list/repository'
+import { InMemoryUserRepository } from '@test/useCases/register-user-on-mailing-list/repository'
+
 
 describe('Register user web controller', () => {
     const user: IUserData[] = []

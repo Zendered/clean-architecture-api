@@ -20,5 +20,4 @@ describe('Content type middleware', () => {
             .get('/test_content_type_xml')
             .expect('Content-Type',/xml/)
     })
-    
 })

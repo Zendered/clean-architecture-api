@@ -1,7 +1,7 @@
 import { IUserData } from "@src/entities/"
 import { IUserRepository } from "@src/useCases/register-user-on-mailing-list/ports/";
-// import { InMemoryUserRepository } from '@src/useCases/register-user-on-mailing-list/repository'
-import { InMemoryUserRepository } from '@test/useCases/register-user-on-mailing-list/repository'
+import { InMemoryUserRepository } from '@src/useCases/register-user-on-mailing-list/repository'
+// import { InMemoryUserRepository } from '@test/useCases/register-user-on-mailing-list/repository'
 import {RegisterUserOnMailingList} from '@src/useCases/register-user-on-mailing-list/RegisterUserOnMailingList'
 
 describe("Register user on mailing list", () => {

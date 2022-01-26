@@ -25,7 +25,8 @@ export class PrismaUserRepository implements IUserRepository {
   }
 
   async findAllUsers (): Promise<IUserData[]> {
-    throw new Error('Method not implemented.')
+    const usersCollection = await this.prisma.user.findMany()
+    return usersCollection
   }
 
   async exists (user: IUserData): Promise<boolean> {

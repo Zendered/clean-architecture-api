@@ -31,6 +31,7 @@
     "husky": "^7.0.4",
     "jest": "^27.4.7",
     "lint-staged": "^12.1.7",
+    "prisma": "^3.8.1",
     "rimraf": "^3.0.2",
     "supertest": "^6.2.2",
     "ts-jest": "^27.1.2",
@@ -41,6 +42,9 @@
     "module-alias": "^2.2.2"
   },
   "_moduleAliases": {
-      "@src": "dist"
+    "@src": "dist"
+  },
+  "prisma": {
+    "schema": "./src/external/repositories/prisma/schema.prisma"
   }
 }

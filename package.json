@@ -12,7 +12,10 @@
     "test-integration": "yarn test --watch -c jest-integration-config.js",
     "test-staged": "yarn test --findRelatedTests",
     "test-ci": "yarn test --coverage",
-    "build": "rimraf dist && tsc -p tsconfig-build.json"
+    "build": "rimraf dist && tsc -p tsconfig-build.json",
+    "studio": "yarn prisma studio",
+    "generate": "yarn prisma generate",
+    "migrate": "yarn prisma migrate"
   },
   "devDependencies": {
     "@types/express": "^4.17.13",

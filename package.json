@@ -5,17 +5,17 @@
   "author": "Luiz <luizz.ggr@gmail.com>",
   "license": "MIT",
   "scripts": {
-    "start": "node dist/main/server.js",
-    "test": "jest --passWithNoTests --silent --noStackTrace --runInBand",
-    "test-verbose": "jest --passWithNoTests --runInBand",
-    "test-unit": "yarn test --watch -c jest-unit-config.js",
-    "test-integration": "yarn test --watch -c jest-integration-config.js",
-    "test-staged": "yarn test --findRelatedTests",
-    "test-ci": "yarn test --coverage",
-    "build": "rimraf dist && tsc -p tsconfig-build.json",
-    "studio": "yarn prisma studio",
-    "generate": "yarn prisma generate",
-    "migrate": "yarn prisma migrate"
+      "test": "jest --passWithNoTests --silent --noStackTrace --runInBand",
+      "test-unit": "yarn test --watch -c jest-unit-config.js",
+      "test-integration": "yarn test --watch -c jest-integration-config.js",
+      "test-ci": "yarn test --coverage",
+      "test-verbose": "jest --passWithNoTests --runInBand",
+      "test-staged": "yarn test --findRelatedTests",
+      "start": "node dist/main/server.js",
+      "build": "rimraf dist && tsc -p tsconfig-build.json",
+      "migrate": "yarn prisma migrate dev",
+      "studio": "yarn prisma studio",
+      "generate": "yarn prisma generate"
   },
   "devDependencies": {
     "@types/express": "^4.17.13",

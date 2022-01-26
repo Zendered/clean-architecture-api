@@ -5,13 +5,13 @@
   "author": "Luiz <luizz.ggr@gmail.com>",
   "license": "MIT",
   "scripts": {
-    "build": "rimraf dist && tsc -p tsconfig-build.json",
     "test": "jest --passWithNoTests --silent --noStackTrace --runInBand",
     "test-verbose": "jest --passWithNoTests --runInBand",
     "test-unit": "yarn test --watch -c jest-unit-config.js",
     "test-integration": "yarn test --watch -c jest-integration-config.js",
     "test-staged": "yarn test --findRelatedTests",
-    "test-ci": "yarn test --coverage"
+    "test-ci": "yarn test --coverage",
+    "build": "rimraf dist && tsc -p tsconfig-build.json"
   },
   "devDependencies": {
     "@types/express": "^4.17.13",
@@ -40,6 +40,6 @@
     "module-alias": "^2.2.2"
   },
   "_moduleAliases": {
-      "@": "dist"
+      "@src": "dist"
   }
 }

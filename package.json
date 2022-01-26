@@ -18,6 +18,7 @@
     "migrate": "yarn prisma migrate"
   },
   "devDependencies": {
+    "@prisma/client": "^3.8.1",
     "@types/express": "^4.17.13",
     "@types/jest": "^27.4.0",
     "@types/node": "^17.0.8",

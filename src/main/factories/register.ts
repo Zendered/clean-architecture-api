@@ -4,7 +4,7 @@ import { PrismaUserRepository } from '@src/external/repositories/prisma/prisma-u
 import { RegisterUserOnMailingList } from '@src/useCases/register-user-on-mailing-list'
 
 export const makeRegisterUserController = (): RegisterUserController => {
-  let prisma: PrismaClient
+  const prisma: PrismaClient = new PrismaClient()
   const prismaUserRepository = new PrismaUserRepository(prisma)
   const registerUserOnMailingListUseCase = new RegisterUserOnMailingList(prismaUserRepository)
   const registerUserController = new RegisterUserController(registerUserOnMailingListUseCase)
